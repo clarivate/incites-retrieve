@@ -40,7 +40,9 @@ $ python batch_lookup.py myfile.csv > output.csv
 
 #### Disclaimer
 
-These scripts are provided to allow InCites users to perform common operations with the AMR web service. The scripts and uses cases may change over time.
+These scripts are provided to allow InCites users to perform common operations with the AMR web service. The scripts and uses cases may change over time. No direct support is provided. 
+
+Please contact [technical support](http://ip-science.thomsonreuters.com/techsupport/) with API access issues.
 
 ## Use Cases
 
@@ -65,6 +67,8 @@ ISI_LOC|NCI|IMPACT_FACTOR|AVG_EXPECTED_RATE|...
 000235983900007|.87|4.155|34.3393|...
 000253436400011|2.42|5.153|24.3601|...
 
-Partial output. See full output in the [documentation](http://about.incites.thomsonreuters.com/api/).
+Partial output. See full output in the [API documentation](http://about.incites.thomsonreuters.com/api/).
+
+
  
 
