@@ -42,7 +42,7 @@ $ python batch_lookup.py myfile.csv > output.csv
 
 These scripts are provided to allow InCites users to perform common operations with the AMR web service. The scripts and uses cases may change over time. No direct support is provided. 
 
-Please contact [technical support](http://ip-science.thomsonreuters.com/techsupport/) with API access issues.
+Please contact [technical support](http://ip-science.thomsonreuters.com/techsupport/) with questions regarding API access.
 
 ## Use Cases
 
