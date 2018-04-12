@@ -8,7 +8,7 @@ For more information about web services for the Web of Science, please review th
 
 ### Requirements
 * Python 2.7 or 3.5
-* Access to the [InCites API](http://ipscience-help.thomsonreuters.com/inCites2Live/10053-TRS.html)
+* Access to the [InCites API](https://developer.clarivate.com/apis/incites)
 
 ### Install
 
@@ -65,7 +65,7 @@ ISI_LOC|NCI|IMPACT_FACTOR|AVG_EXPECTED_RATE|...
 000235983900007|.87|4.155|34.3393|...
 000253436400011|2.42|5.153|24.3601|...
 
-Partial output. See full output in the [API documentation](http://about.incites.thomsonreuters.com/api/).
+Partial output. See full output in the [API documentation](https://developer.clarivate.com/apis/incites).
 
 
  
