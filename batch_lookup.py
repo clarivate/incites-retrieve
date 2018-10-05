@@ -31,6 +31,26 @@ INCITES_KEY = os.environ['INCITES_KEY']
 # Number of UTs to send to InCites at once - 100 is limit set by API.
 BATCH_SIZE = 100
 
+# Define the fields for the output file. In lieu of putting the entire
+# result set into memory before writing out, we must explicitly list the
+# fields to account for the unlikely case that the first batch of results
+# is missing fields that would be returned in a subsequent batch.
+fields = ["ISI_LOC",
+          "ARTICLE_TYPE",
+          "TOT_CITES",
+          "JOURNAL_EXPECTED_CITATIONS",
+          "JOURNAL_ACT_EXP_CITATIONS",
+          "IMPACT_FACTOR",
+          "AVG_EXPECTED_RATE",
+          "PERCENTILE",
+          "NCI",
+          "ESI_MOST_CITED_ARTICLE",
+          "HOT_PAPER",
+          "IS_INTERNATIONAL_COLLAB",
+          "IS_INSTITUTION_COLLAB",
+          "IS_INDUSTRY_COLLAB",
+          "OA_FLAG",
+          "RNUM"]
 
 def grouper(iterable, n, fillvalue=None):
     """
@@ -74,17 +94,13 @@ def main():
 
     found = []
 
-    writer = csv.writer(sys.stdout)
-    first = True
+    writer = csv.DictWriter(sys.stdout, fieldnames=fields)
+    writer.writeheader()
     for idx, batch in enumerate(grouper(to_check, BATCH_SIZE)):
         eprint("Processing batch", idx)
         found = get(batch)
         for grp in found:
-            if first is True:
-                # write header
-                writer.writerow(grp.keys())
-                first = False
-            writer.writerow(grp.values())
+            writer.writerow(grp)
         time.sleep(.5)
 
 
