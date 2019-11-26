@@ -1,7 +1,8 @@
 ## InCites Retrieve
 
-This code supports batch retrieval of metrics from the [InCites Benchmarking and Analytics](https://clarivate.com/products/incites/) [API](http://ipscience-help.thomsonreuters.com/inCites2Live/10053-TRS.html).
+This code supports batch retrieval of metrics from the [InCites Benchmarking and Analytics](https://clarivate.com/products/incites/) [API](https://developer.clarivate.com/apis/incites).
 
+Please see the Product/Service terms on the Clarivate [Terms of business](https://clarivate.com/legal/terms-of-business/) page for details on how the data retrieved using this service can be used, including which fields may be shown on third party public-facing pages.
 For more information about web services for the Web of Science, please review this [data integration](https://clarivate.com/products/data-integration/) website.
 
 # Getting started
