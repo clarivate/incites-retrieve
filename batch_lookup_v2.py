@@ -68,7 +68,25 @@ fields = ["ACCESSION_NUMBER",
           "CAT_3_PERCENTILE",
           "CAT_3_EXPECTED_CITATIONS",
           "CAT_3_IS_BEST",
-          "CAT_3_CNCI"]
+          "CAT_3_CNCI",
+          "CAT_4",
+          "CAT_4_CODE",
+          "CAT_4_PERCENTILE",
+          "CAT_4_EXPECTED_CITATIONS",
+          "CAT_4_IS_BEST",
+          "CAT_4_CNCI",
+          "CAT_5",
+          "CAT_5_CODE",
+          "CAT_5_PERCENTILE",
+          "CAT_5_EXPECTED_CITATIONS",
+          "CAT_5_IS_BEST",
+          "CAT_5_CNCI",
+          "CAT_6",
+          "CAT_6_CODE",
+          "CAT_6_PERCENTILE",
+          "CAT_6_EXPECTED_CITATIONS",
+          "CAT_6_IS_BEST",
+          "CAT_6_CNCI"]
 
 
 def grouper(iterable, n, fillvalue=None):
