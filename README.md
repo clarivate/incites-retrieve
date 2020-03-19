@@ -36,7 +36,17 @@ set INCITES_KEY="mykey"
 Run the script with the incoming csv data as the first parameter. The output will be printed as CSV to the console. It can be redirected to a file for saving. For example:
 
 ~~~
-$ python batch_lookup.py myfile.csv > output.csv
+$ python batch_lookup_v2.py myfile.csv > output.csv
+~~~
+
+#### Available files
+batch_lookup_v2.py: Calls version 2 of the InCites API, which provides additional open access and subject category data 
+batch_lookup_v1.py: Calls version 1 of the InCites API, provided here only for posterity 
+
+#### ESCI
+By default, results do not include the Emerging Sources Citation Index. To include ESCI, edit the setting in Python.
+~~~
+ESCI = False  # Set to True to include ESCI in results
 ~~~
 
 #### Disclaimer
