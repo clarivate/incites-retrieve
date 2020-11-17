@@ -8,7 +8,7 @@ For more information about web services for the Web of Science, please review th
 # Getting started
 
 ### Requirements
-* Python 2.7 or 3.5
+* Python 3.5+ (Python 2.7+ may work, but success not guaranteed)
 * Access to the [InCites API](https://developer.clarivate.com/apis/incites)
 
 ### Install

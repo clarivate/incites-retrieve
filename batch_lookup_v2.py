@@ -27,8 +27,16 @@ else:
 
 
 URL = "https://api.clarivate.com/api/incites/DocumentLevelMetricsByUT/json"
+
+# Your InCites API key. Store as an environmental variable, or hardcode here.
 INCITES_KEY = os.environ['INCITES_KEY']
-ESCI = False  # Set to True to include ESCI in results
+
+# Set to True to include ESCI in results
+ESCI = False
+
+# Retrieves schema specific metrics. API default is 'wos'.
+SCHEMA = 'wos'
+
 # Number of UTs to send to InCites at once - 100 is limit set by API.
 BATCH_SIZE = 100
 
@@ -55,7 +63,7 @@ def get(batch):
     params = urlencode({'UT': ",".join([b for b in batch if b is not None])})
     if ESCI:
         params += '&esci=y'
-    url = "{}?{}&ver=2".format(URL, params)
+    url = "{}?{}&schema={}&ver=2".format(URL, params, SCHEMA)
     q = Request(url)
     q.add_header('X-ApiKey', INCITES_KEY)
     rsp = urlopen(q)
