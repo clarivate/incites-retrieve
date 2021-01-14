@@ -44,9 +44,15 @@ batch_lookup_v2.py: Calls version 2 of the InCites API, which provides additiona
 batch_lookup_v1.py: Calls version 1 of the InCites API, provided here only for posterity 
 
 #### ESCI
-By default, results do not include the Emerging Sources Citation Index. To include ESCI, edit the setting in Python.
+By default, results do not include the Emerging Sources Citation Index. To include ESCI, edit the setting in batch_lookup_vx.py.
 ~~~
 ESCI = False  # Set to True to include ESCI in results
+~~~
+
+#### Schema
+The v2 API will return category normalized metrics for Web of Science categories by default. You can also adjust the category schema. See the InCites API documentation for the list of options.
+~~~
+SCHEMA = 'for1'
 ~~~
 
 #### Disclaimer
